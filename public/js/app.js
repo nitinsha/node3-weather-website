@@ -1,17 +1,4 @@
 console.log('Client side js loaded');
-// fetch('http://puzzle.mead.io/puzzle').then((response) => {
-//     response.json().then(data => {
-//         console.log(data);
-//     });
-// });
-
-// fetch('/weather?address=chennai')
-//     .then(response => {
-//         response.json()
-//         .then(data=>{
-//             console.log(data)
-//         })
-//     });
     const weatherForm = document.querySelector('form');
     const loc = document.querySelector('input');
     let messageOne = document.querySelector('#message-1');
@@ -26,7 +13,6 @@ console.log('Client side js loaded');
         .then(response => {
             response.json()
             .then(data=>{
-                console.log(data);
                 if(data.error){
                     messageOne.style.color="red";
                     messageOne.textContent=data.error;
@@ -35,7 +21,6 @@ console.log('Client side js loaded');
                     messageOne.textContent=data.location;
                     messageTwo.innerHTML=data.forecast
                 }
-                console.log(data)
             })
         });
         

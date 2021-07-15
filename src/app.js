@@ -38,7 +38,6 @@ app.get('/help', (req, res) => {
 
 app.get('/weather', (req, res) => {
     const address = req.query.address;
-    console.log('here');
     if(!address){
         return res.send({error: "Address field is missing"});
     }
